@@ -1,7 +1,5 @@
 # app-social-mask
 
-1 - npm install -g expo-cli
+1 - yarn
 
-2 - yarn
-
-3 - expo start
+2 - expo start
