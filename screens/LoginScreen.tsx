@@ -1,12 +1,42 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import * as React from 'react';
+import React, { useState } from 'react';
 import {View, KeyboardAvoidingView, Image, TextInput, TouchableOpacity, Text, StyleSheet,StatusBar,Animated} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 import HomeScreen from './HomeScreen';
 
+import * as firebase from 'firebase';
+
+// Optionally import the services that you want to use
+import "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAnTINae88f-ZrearIY_fxvDxd1kSI5UwI",
+  authDomain: "social-mask.firebaseapp.com",
+  databaseURL: "https://social-mask.firebaseio.com",
+  projectId: "social-mask",
+  storageBucket: "",
+  // messagingSenderId: "sender-id",
+  // appId: "app-id",
+  // measurementId: "G-measurement-id"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 export default function LoginScreen({navigation}:any){
+  
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  
+  const loginUser = async (email: string, password: string) => {
+    try {
+      const user = await firebase.auth().signInWithEmailAndPassword(email, password)
+      navigation.push('Tabs')
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
    <KeyboardAvoidingView style={styles.background}>
@@ -22,20 +52,20 @@ export default function LoginScreen({navigation}:any){
      style={styles.input}
      placeholder={"Email"}
      autoCorrect={false}
-     onChangeText={()=> {}}
+     onChangeText={(email)=> setEmail(email)}
      />
 
   <TextInput
      style={styles.input}
      placeholder={"Senha"}
      autoCorrect={false}
-     onChangeText={()=> {}}
+     onChangeText={(password)=> setPassword(password)}
      />
 
 
      <TouchableOpacity style={styles.btnSubmit}>
        <Text style={styles.submitText}
-       onPress={()=>{navigation.push('Tabs')}} >Acessar</Text>
+       onPress={() => loginUser(email, password)} >Acessar</Text>
      </TouchableOpacity>
 
      <TouchableOpacity style={styles.btnRegister}>
