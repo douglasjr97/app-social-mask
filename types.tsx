@@ -3,6 +3,8 @@ export type RootStackParamList = {
   Tabs:undefined;
   NotFound: undefined;
   Cadastro: undefined;
+  Confirmado: undefined;
+  Pedidos: undefined;
 };
 
 export type BottomTabParamList = {

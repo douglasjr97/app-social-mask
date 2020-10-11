@@ -1,32 +1,64 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
-
+import { StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { RootStackParamList } from '../types';
+import { StackScreenProps } from '@react-navigation/stack';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-export default function HomeScreen() {
+export default function PedidosScreen({
+  navigation,
+}: StackScreenProps<RootStackParamList, 'Confirmado'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      
+         <View>
+        <Image 
+        source={require("../assets/images/logo2.png")} style={styles.logo}/>
+      </View>
+      <TouchableOpacity onPress={() => navigation.push('Confirmado')} style={styles.link}>
+        <Text style={styles.linkText}>Efetuar Pagamento</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.push('Tabs')} style={styles.link}>
+        <Text style={styles.linkText}>Cancelar Pagamento</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container:{
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'black'
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+logo: {
+width: 150,
+height: 150,
+borderRadius: 3,
+marginBottom:30
+},
+title: {
+fontSize: 20,
+fontWeight: 'bold',
+color: '#fff'
+},
+separator: {
+marginVertical: 30,
+height: 1,
+width: '80%',
+},
+link: {
+backgroundColor: '#35AAFF',
+ height: 45,
+ width: 300,
+ marginTop: 10,
+ alignItems: 'center',
+ justifyContent: 'center',
+ borderRadius: 4
+},
+linkText: {
+color: '#FFF',
+fontSize:18,
+borderRadius: 5
+},
 });

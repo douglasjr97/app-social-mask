@@ -4,7 +4,8 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 import CadastroScreen from '../screens/CadastroScreen';
 import LoginScreen from '../screens/LoginScreen';
-
+import PedidosScreen from '../screens/PedidosScreen';
+import ConfirmadoScreen from '../screens/ConfirmadoScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
@@ -33,6 +34,8 @@ function RootNavigator() {
       <Stack.Screen name="Root" component={LoginScreen} />
       <Stack.Screen name="Tabs" component={BottomTabNavigator} />
       <Stack.Screen name="Cadastro" component={CadastroScreen} />
+      <Stack.Screen name="Confirmado" component={ConfirmadoScreen} />
+      <Stack.Screen name="Pedidos" component={PedidosScreen} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );

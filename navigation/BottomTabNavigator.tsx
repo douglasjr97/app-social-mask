@@ -11,6 +11,7 @@ import HomeScreen from '../screens/HomeScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 import PerfilScreen from '../screens/PerfilScreen';
 
+import PedidosScreen from '../screens/PedidosScreen';
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
@@ -36,7 +37,7 @@ export default function BottomTabNavigator() {
       />
          <BottomTab.Screen
         name="Pedidos"
-        component={PerfilScreen}
+        component={PedidosScreen}
         options={{
           tabBarIcon: ({ color }) => <AntDesign name="shoppingcart" size={24} color="black" />,
         }}
