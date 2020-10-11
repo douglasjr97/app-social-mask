@@ -96,7 +96,7 @@ export default function PerfilScreen() {
 const styles = StyleSheet.create({
 container: {
     flex: 1,
-    backgroundColor: "#FFF"
+    backgroundColor: "#fff"
 },
 text: {
     color: "#52575D"
