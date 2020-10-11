@@ -39,7 +39,7 @@ export default function LoginScreen({navigation}:any){
      </TouchableOpacity>
 
      <TouchableOpacity style={styles.btnRegister}>
-       <Text style={styles.submitText}>Criar conta gratuita</Text>
+       <Text style={styles.submitText} onPress={()=>{navigation.push('Cadastro')}}>Criar conta gratuita</Text>
      </TouchableOpacity>
      </View>
    </KeyboardAvoidingView>
