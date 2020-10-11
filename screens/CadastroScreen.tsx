@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, KeyboardAvoidingView, Image,TextInput,TouchableOpacity } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
+import firebase from './LoginScreen';
 import { Text, View } from '../components/Themed';
 
-export default function CadastroScreen() {
+
+export default function CadastroScreen({navigation}:any) {
   return (
     
     <KeyboardAvoidingView style={styles.container}>
@@ -54,11 +54,11 @@ export default function CadastroScreen() {
       style={styles.btnSubmit}
       onPress={ () => {} }
      >
-       <Text style={styles.submitText}>Cadastre-se</Text>
+       <Text style={styles.submitText}  onPress={()=>{navigation.push('Tabs')}} >Cadastre-se</Text>
      </TouchableOpacity>
      
      <TouchableOpacity style={styles.btnRegister}>
-       <Text style={styles.submitText}>Fazer login</Text>
+       <Text style={styles.submitText}  onPress={()=>{navigation.push('Root')}}>Fazer login</Text>
      </TouchableOpacity>
     
      </KeyboardAvoidingView>
