@@ -27,7 +27,6 @@ container:{
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'black'
       },
   logo: {
     width: 150,
@@ -36,9 +35,9 @@ container:{
     marginBottom:30
   },
   title: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#000'
   },
   separator: {
     marginVertical: 30,

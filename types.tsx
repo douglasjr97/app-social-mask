@@ -5,6 +5,7 @@ export type RootStackParamList = {
   Cadastro: undefined;
   Confirmado: undefined;
   Pedidos: undefined;
+  Pagamento: undefined;
 };
 
 export type BottomTabParamList = {

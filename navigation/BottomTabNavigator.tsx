@@ -10,7 +10,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import HomeScreen from '../screens/HomeScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 import PerfilScreen from '../screens/PerfilScreen';
-
+import FindScreen from '../screens/FindScreen';
 import PedidosScreen from '../screens/PedidosScreen';
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -30,7 +30,7 @@ export default function BottomTabNavigator() {
       />
          <BottomTab.Screen
         name="Pesquisa"
-        component={PerfilScreen}
+        component={FindScreen}
         options={{
           tabBarIcon: ({ color }) => <FontAwesome name="search" size={24} color="black" />,
         }}

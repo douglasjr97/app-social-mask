@@ -6,6 +6,8 @@ import CadastroScreen from '../screens/CadastroScreen';
 import LoginScreen from '../screens/LoginScreen';
 import PedidosScreen from '../screens/PedidosScreen';
 import ConfirmadoScreen from '../screens/ConfirmadoScreen';
+import PagamentoScreen from '../screens/PagamentoScreen';
+import FindScreen from '../screens/FindScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
@@ -33,8 +35,10 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={LoginScreen} />
       <Stack.Screen name="Tabs" component={BottomTabNavigator} />
+      <Stack.Screen name="Pesquisa" component={FindScreen} />
       <Stack.Screen name="Cadastro" component={CadastroScreen} />
       <Stack.Screen name="Confirmado" component={ConfirmadoScreen} />
+      <Stack.Screen name="Pagamento" component={PagamentoScreen} />
       <Stack.Screen name="Pedidos" component={PedidosScreen} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>

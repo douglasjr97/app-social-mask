@@ -12,14 +12,12 @@ export default function PedidosScreen({
     <View style={styles.container}>
          <View>
         <Image 
-        source={require("../assets/images/logo2.png")} style={styles.logo}/>
+        source={require("../assets/images/logo1.png")} style={styles.logo}/>
       </View>
-      <TouchableOpacity onPress={() => navigation.push('Confirmado')} style={styles.link}>
-        <Text style={styles.linkText}>Efetuar Pagamento</Text>
+      <TouchableOpacity onPress={() => navigation.push('Pagamento')} style={styles.link}>
+        <Text style={styles.linkText}>Continuar com o Pagamento</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.push('Tabs')} style={styles.link}>
-        <Text style={styles.linkText}>Cancelar Pagamento</Text>
-      </TouchableOpacity>
+
     </View>
   );
 }
@@ -29,7 +27,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'black'
   },
 logo: {
 width: 150,

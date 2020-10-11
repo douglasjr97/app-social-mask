@@ -13,7 +13,7 @@ export default {
           },
           FindScreen: {
             screens: {
-              Home: 'two',
+              Pesquisa: 'two',
             },
           },
           PedidosScreen: {
