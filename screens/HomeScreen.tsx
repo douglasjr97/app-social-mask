@@ -55,9 +55,9 @@ export default class HomeScreen extends Component {
   
     {
       id:"2",
-      nome:"Máscara Vasco",
+      nome:"Máscara Flamengo 2",
       categoria:"Futebol",
-     urlImage:"https://img.elo7.com.br/product/zoom/2EE9192/mascara-de-protecao-vasco-coronavirus.jpg",
+     urlImage:"https://static3.tcdn.com.br/img/img_prod/311840/kit_de_3_mascaras_flamengo_preta_e_vermelha_78549_2_20200515153634.jpg",
      preco:"36,00",
      oferta:"17%"
      },

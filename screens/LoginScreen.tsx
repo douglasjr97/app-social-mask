@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 import HomeScreen from './HomeScreen';
+import { Button } from 'react-native-paper';
+
 
 import * as firebase from 'firebase';
 
@@ -64,7 +66,6 @@ export default function LoginScreen({navigation}:any){
  
    <TextInput
       style={styles.input}
-      keyboardType="numeric"
       placeholder={"Senha"}
       autoCorrect={false}
       secureTextEntry={true}
@@ -72,10 +73,11 @@ export default function LoginScreen({navigation}:any){
       />
  
  
-      <TouchableOpacity style={styles.btnSubmit}>
-        <Text style={styles.submitText}
-        onPress={() => loginUser(email, password)} >Acessar</Text>
-      </TouchableOpacity>
+    
+
+      <Button mode="contained" style={styles.botao} onPress={() => loginUser(email, password)}>
+    Acessar
+    </Button>
  
       <TouchableOpacity style={styles.btnRegister}>
         <Text style={styles.submitText} onPress={()=>{navigation.push('Cadastro')}}>Criar conta gratuita</Text>
@@ -97,6 +99,10 @@ export default function LoginScreen({navigation}:any){
      height: 150,
      borderRadius: 3,
      marginBottom:30
+   },
+   botao: {
+    marginTop: 10,
+    height:45
    },
    container:{
      flex: 1,
@@ -139,6 +145,8 @@ export default function LoginScreen({navigation}:any){
      fontSize: 30,
      fontWeight: 'bold'
  }
+
+
  });
  
  
