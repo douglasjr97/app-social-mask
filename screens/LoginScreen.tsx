@@ -39,102 +39,95 @@ export default function LoginScreen({navigation}:any){
   }
 
   return (
-   <KeyboardAvoidingView style={styles.background}>
-     <View style={styles.container}>
-       <Image 
-       source={require("../assets/images/logo1.png")}
-       />
-       
-     </View>
-
-     <View>
-     <TextInput
-     style={styles.input}
-     placeholder={"Email"}
-     autoCorrect={false}
-     onChangeText={(email)=> setEmail(email)}
-     />
-
-  <TextInput
-     style={styles.input}
-     placeholder={"Senha"}
-     autoCorrect={false}
-     onChangeText={(password)=> setPassword(password)}
-     />
-
-
-     <TouchableOpacity style={styles.btnSubmit}>
-       <Text style={styles.submitText}
-       onPress={() => loginUser(email, password)} >Acessar</Text>
-     </TouchableOpacity>
-
-     <TouchableOpacity style={styles.btnRegister}>
-       <Text style={styles.submitText} onPress={()=>{navigation.push('Cadastro')}}>Criar conta gratuita</Text>
-     </TouchableOpacity>
-     </View>
-   </KeyboardAvoidingView>
-  );
-
-  
-}  
-    
-
-
-
-
-const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'black'
-  },
-  containerLogo:{
-    flex: 1,
-  
-    
-    alignItems: 'center',
-  },
-  container:{
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '90%',
-    paddingBottom: 50
-  },
-  input:{
-    backgroundColor: '#FFF',
-    width: '90%',
-    marginBottom: 15,
-    color: '#222',
-    fontSize: 17,
-    borderRadius: 7,
-    padding: 10
-  },
-  btnSubmit:{
-    backgroundColor: '#35AAFF',
-    width: '90%',
-    height: 45,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 7
-  },
-  submitText:{
-    color: '#FFF',
-    fontSize:18
-  },
-  btnRegister:{
-    marginTop: 10,
-  },
-  btnText:{
-    color: '#FFF'
-  },
-  title:{
-    color: 'white',
-    paddingRight:238,
-    paddingBottom:20,
-    fontSize: 30,
-    fontWeight: 'bold'
-}
-});
-
+    <KeyboardAvoidingView style={styles.container}>
+      <View>
+        <Image 
+        source={require("../assets/images/logo2.png")} style={styles.logo}/>
+      </View>
+ 
+      <View>
+      <TextInput
+      style={styles.input}
+      placeholder={"Email"}
+      autoCorrect={false}
+      onChangeText={(email)=> setEmail(email)}
+      />
+ 
+   <TextInput
+      style={styles.input}
+      placeholder={"Senha"}
+      autoCorrect={false}
+      onChangeText={(password)=> setPassword(password)}
+      />
+ 
+ 
+      <TouchableOpacity style={styles.btnSubmit}>
+        <Text style={styles.submitText}
+        onPress={() => loginUser(email, password)} >Acessar</Text>
+      </TouchableOpacity>
+ 
+      <TouchableOpacity style={styles.btnRegister}>
+        <Text style={styles.submitText} onPress={()=>{navigation.push('Cadastro')}}>Criar conta gratuita</Text>
+      </TouchableOpacity>
+      </View>
+    </KeyboardAvoidingView>
+   );
+ 
+   
+ }  
+     
+ 
+ 
+ 
+ 
+ const styles = StyleSheet.create({
+   logo: {
+     width: 150,
+     height: 150,
+     borderRadius: 3,
+     marginBottom:30
+   },
+   container:{
+     flex: 1,
+     alignItems: 'center',
+     justifyContent: 'center',
+     backgroundColor: 'black'
+   },
+   input:{
+     backgroundColor: '#FFF',
+     color: '#222',
+     marginTop: 10,
+     width:300,
+     fontSize: 17,
+     borderRadius: 3,
+     padding: 10
+   },
+   btnSubmit:{
+     backgroundColor: '#35AAFF',
+     height: 45,
+     marginTop: 10,
+     alignItems: 'center',
+     justifyContent: 'center',
+     borderRadius: 4
+   },
+   submitText:{
+     color: '#FFF',
+     fontSize:18
+     
+   },
+   btnRegister:{
+     marginTop: 10,
+   },
+   btnText:{
+     color: '#FFF'
+   },
+   title:{
+     color: 'white',
+     paddingRight:238,
+     paddingBottom:20,
+     fontSize: 30,
+     fontWeight: 'bold'
+ }
+ });
+ 
+ 

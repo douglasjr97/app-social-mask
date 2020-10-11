@@ -1,14 +1,17 @@
 import * as React from 'react';
-import { StyleSheet,TextInput,TouchableOpacity } from 'react-native';
+import { StyleSheet, KeyboardAvoidingView, Image,TextInput,TouchableOpacity } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function CadastroScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Cadastro</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+    
+    <KeyboardAvoidingView style={styles.container}>
+      <View>
+       <Image 
+       source={require("../assets/images/logo2.png")} style={styles.logo}/>
+     </View>
 
       <TextInput
      style={styles.input}
@@ -48,60 +51,68 @@ export default function CadastroScreen() {
       />
 
      <TouchableOpacity
-      style={styles.botao}
+      style={styles.btnSubmit}
       onPress={ () => {} }
      >
-       <Text style={styles.botaoText}>Cadastre-se</Text>
+       <Text style={styles.submitText}>Cadastre-se</Text>
+     </TouchableOpacity>
+     
+     <TouchableOpacity style={styles.btnRegister}>
+       <Text style={styles.submitText}>Fazer login</Text>
      </TouchableOpacity>
     
-    </View>
-  
+     </KeyboardAvoidingView>
+
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  logo: {
+    width: 150,
+    height: 150,
+    borderRadius: 3,
+    marginBottom:30
+  },
+  container:{
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'black'
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: 'white'
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%'
-  },
-  input: {
+  input:{
+    backgroundColor: '#FFF',
+    color: '#222',
     marginTop: 10,
-    padding: 10,
-    width: 300,
-    backgroundColor:'white',
-    fontSize: 16,
-    fontWeight: 'bold',
-    borderRadius: 3
+    width:300,
+    fontSize: 17,
+    borderRadius: 3,
+    padding: 10
   },
-  botao: {
-    width: 300,
-    height: 42,
-    backgroundColor: '#3498db',
-    marginTop: 12,
-    borderRadius: 4,
-    alignItems: "center",
-    justifyContent: "center",
-    opacity: 5
-
-
+  btnSubmit:{
+    backgroundColor: '#35AAFF',
+    height: 45,
+    width:300,
+    marginTop: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4
   },
-  botaoText: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: 'white'
-    
+  submitText:{
+    color: '#FFF',
+    fontSize:18,
+  },
+  btnRegister:{
+    marginTop: 10,
+  },
+  btnText:{
+    color: '#FFF'
+  },
+  title:{
+    color: 'white',
+    paddingRight:238,
+    paddingBottom:20,
+    fontSize: 30,
+    fontWeight: 'bold'
 
   },
 
