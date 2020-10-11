@@ -22,7 +22,7 @@ export default function PerfilScreen() {
 
             <View style={styles.infoContainer}><Text style={[styles.text, { fontSize: 15}]}>Olá, </Text>
           
-            <Text style={[styles.text, { fontWeight: "200", fontSize: 34 }]}>Lucas</Text>
+            <Text style={[styles.text, { fontWeight: "200", fontSize: 34 }]}>User</Text>
             </View>
 
             <View style={styles.statsContainer}>

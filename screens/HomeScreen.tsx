@@ -72,7 +72,7 @@ render() {
   
   <Card style={styles.Card}>
  
-      <Text style={styles.TextoBemVindo}>Olá Allan</Text>
+      <Text style={styles.TextoBemVindo}>Olá User</Text>
     </Card>
 
 
