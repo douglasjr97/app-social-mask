@@ -57,6 +57,7 @@ export default function LoginScreen({navigation}:any){
       style={styles.input}
       placeholder={"Senha"}
       autoCorrect={false}
+      secureTextEntry={true}
       onChangeText={(password)=> setPassword(password)}
       />
  
