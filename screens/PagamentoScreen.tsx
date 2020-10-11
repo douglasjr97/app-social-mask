@@ -13,6 +13,7 @@ export default function PagamentoScreen({
       <TextInput
       style={styles.input}
       placeholder={"Cep"}
+      keyboardType="numeric"
       autoCorrect={false}
       />
       <TextInput
@@ -33,6 +34,28 @@ export default function PagamentoScreen({
       <TextInput
       style={styles.input}
       placeholder={"Estado"}
+      autoCorrect={false}
+      />
+            <TextInput
+      style={styles.input}
+      placeholder={"Número do Cartão"}
+      autoCorrect={false}
+      />
+      <TextInput
+      style={styles.input}
+      placeholder={"Nome do Titular"}
+      autoCorrect={false}
+      />
+      <TextInput
+      style={styles.input}
+      placeholder={"Data de Validade"}
+      autoCorrect={false}
+      keyboardType="numeric"
+      />
+      <TextInput
+      style={styles.input}
+      placeholder={"CVV"}
+      keyboardType="numeric"
       autoCorrect={false}
       />
       <TouchableOpacity onPress={() => navigation.push('Confirmado')} style={styles.link}>

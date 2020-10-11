@@ -14,6 +14,7 @@ export type BottomTabParamList = {
   Pesquisa: undefined;
   Pedidos: undefined;
   LoginScreen: undefined;
+  SobreScreen: undefined;
 };
 
 export type TabOneParamList = {

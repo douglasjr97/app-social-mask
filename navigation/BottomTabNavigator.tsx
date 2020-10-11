@@ -12,6 +12,7 @@ import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 import PerfilScreen from '../screens/PerfilScreen';
 import FindScreen from '../screens/FindScreen';
 import PedidosScreen from '../screens/PedidosScreen';
+import SobreScreen from '../screens/SobreScreen';
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
@@ -40,6 +41,13 @@ export default function BottomTabNavigator() {
         component={PedidosScreen}
         options={{
           tabBarIcon: ({ color }) => <AntDesign name="shoppingcart" size={24} color="black" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Equipe"
+        component={SobreScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="users" size={24} color="black" />,
         }}
       />
       <BottomTab.Screen
