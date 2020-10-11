@@ -1,31 +1,85 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { Component } from 'react';
+import { FlatList,SafeAreaView,StyleSheet,Image,Text,ScrollView} from 'react-native';
+import {Searchbar, Avatar,Appbar, Button,Banner, Card, Title, Paragraph,Chip } from 'react-native-paper';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
 
-export default function PesquisaScreen() {
+
+export default class PesquisaScreen extends Component {
+
+  categorias=([
+
+    {
+      id:"1",
+      nome:"Marcas",
+      icone:"apple"
+     },
+  
+    {
+      id:"2",
+      nome:"Futebol",
+      icone:"soccer"
+     },
+     {
+      id:"3",
+      nome:"Animes",
+      icone:"heart"
+     },
+     {
+      id:"4",
+      nome:"Filmes",
+      icone:"play"
+     },
+     {
+      id:"5",
+      nome:"Coloridas",
+      icone:"tag"
+     },
+     {
+      id:"6",
+      nome:"Artistas",
+      icone:"star"
+     },
+  ]);
+  
+
+  produtos=([
+
+    {
+      id:"1",
+      nome:"Máscara Flamengo",
+      categoria:"Futebol",
+     urlImage:"https://static3.tcdn.com.br/img/img_prod/311840/kit_de_3_mascaras_flamengo_preta_e_vermelha_78549_2_20200515153634.jpg",
+     preco:"75,00",
+     oferta:"15%"
+     },
+  
+    {
+      id:"2",
+      nome:"Máscara Vasco",
+      categoria:"Futebol",
+     urlImage:"https://img.elo7.com.br/product/zoom/2EE9192/mascara-de-protecao-vasco-coronavirus.jpg",
+     preco:"36,00",
+     oferta:"17%"
+     },
+  ])
+
+render() {
+ 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Pesquisa</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-    </View>
+    <>
+     <Searchbar
+      placeholder="Pesquisar por produto"
+      style={styles.pesquisa}
+      value={""}
+    />
+  </>
   );
+}
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+ pesquisa:{
+   fontSize:15,
+   paddingTop:20
+ }
 });
