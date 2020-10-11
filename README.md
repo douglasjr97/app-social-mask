@@ -2,4 +2,6 @@
 
 1 - yarn
 
-2 - expo start
+2 - yarn add react-native-paper
+
+3 - expo start
