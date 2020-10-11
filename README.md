@@ -6,3 +6,8 @@
 / ou nmp install react-native-paper
 
 3 - expo start
+
+# Login Hacking in rio
+
+loogin: hr@varejo.com <br>
+senha: 123456
