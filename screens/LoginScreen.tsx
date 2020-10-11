@@ -55,6 +55,7 @@ export default function LoginScreen({navigation}:any){
  
    <TextInput
       style={styles.input}
+      keyboardType="numeric"
       placeholder={"Senha"}
       autoCorrect={false}
       secureTextEntry={true}
