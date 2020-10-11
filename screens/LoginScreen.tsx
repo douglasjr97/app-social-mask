@@ -33,8 +33,17 @@ export default function LoginScreen({navigation}:any){
     try {
       const user = await firebase.auth().signInWithEmailAndPassword(email, password)
       navigation.push('Tabs')
-    } catch (error) {
-      console.log(error)
+    } 
+    
+      catch (error) {
+      if(error.code === 'auth/invalid-email'){
+        alert('Email Inválido');
+      }
+      if(error.code === 'auth/weak-password'){
+        alert('senha Inválida');
+      }else{
+        alert('Codigo de error: '+ error.code)
+      }
     }
   }
 
