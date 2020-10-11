@@ -3,7 +3,7 @@
 1 - yarn
 
 2 - yarn add react-native-paper <br>
-/ ou nmp install react-native-paper
+/ ou npm install react-native-paper
 
 3 - expo start
 
@@ -11,3 +11,7 @@
 
 loogin: hr@varejo.com <br>
 senha: 123456
+
+#Apresentacao
+Video apresentcao ideia https://www.youtube.com/watch?v=s9enJKDGOZA&feature=youtu.be
+Video App https://www.youtube.com/watch?v=X2JvjmfNnrc&feature=emb_title
