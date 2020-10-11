@@ -35,7 +35,6 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={LoginScreen} />
       <Stack.Screen name="Tabs" component={BottomTabNavigator} />
-      <Stack.Screen name="Pesquisa" component={FindScreen} />
       <Stack.Screen name="Cadastro" component={CadastroScreen} />
       <Stack.Screen name="Confirmado" component={ConfirmadoScreen} />
       <Stack.Screen name="Pagamento" component={PagamentoScreen} />
