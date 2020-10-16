@@ -1,4 +1,4 @@
-# app-social-mask
+# app-social-mask Hacking in Rio Competition
 
 1 - yarn
 
